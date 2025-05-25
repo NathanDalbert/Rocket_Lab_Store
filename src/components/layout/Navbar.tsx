@@ -1,12 +1,10 @@
-// src/components/layout/Navbar.tsx
 import { Search, ShoppingCart } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../../contexts/CartContext';
-import logoSrc from '../../imagens/Logo.png'; // Caminho correto da importação
+import logoSrc from '../../imagens/Logo.png';
 import ThemeToggle from '../common/ThemeToggle';
 
-// Componente SearchInput (permanece o mesmo)
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 const SearchInput: React.FC<InputProps> = ({ className, ...props }) => (
   <input
@@ -33,16 +31,16 @@ export const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 text-white bg-gray-800 border-b border-gray-700 shadow-lg dark:bg-gray-900 dark:border-gray-800">
       <div className="container px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-2 sm:gap-4 sm:h-20"> {/* Altura total do Navbar */}
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16 gap-2 sm:gap-4 sm:h-20">
+         
           <Link to="/" className="flex-shrink-0" aria-label="Página Inicial RocketLabStore">
             <div className="flex items-center gap-2">
-              {/* AJUSTE DA ALTURA DO LOGO AQUI */}
-              <div className="w-auto h-14 sm:h-16"> {/* Teste com 56px / 64px */}
+             
+              <div className="w-auto h-14 sm:h-16">
                  <img
                     src={logoSrc}
                     alt="RocketLabStore Logo"
-                    className="object-contain w-auto h-full" // object-contain mantém a proporção
+                    className="object-contain w-auto h-full" 
                   />
               </div>
             </div>

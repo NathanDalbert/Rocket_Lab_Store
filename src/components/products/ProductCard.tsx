@@ -1,17 +1,14 @@
-// src/components/products/ProductCard.tsx
 import { Heart, ShoppingCart, Star } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useCart } from '../../contexts/CartContext'; // Ajuste o caminho para o NOVO CartContext
+import { useCart } from '../../contexts/CartContext';
 import { useToast } from '../../contexts/ToastContext';
-import type { Product } from '../../types'; // Nosso tipo Product do projeto Vite
-
+import type { Product } from '../../types';
 interface ProductCardProps {
   product: Product;
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  // AJUSTE AQUI: Usando 'dispatch' do novo CartContext
   const { dispatch } = useCart();
   const { showToast } = useToast();
 
@@ -26,7 +23,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       return;
     }
 
-    // AJUSTE AQUI: Despachando a ação ADD_ITEM com o produto e quantidade
+    
     dispatch({ type: "ADD_ITEM", payload: { product, quantity: 1 } });
     showToast(`${product.name} adicionado ao carrinho!`, "success");
   };
@@ -67,7 +64,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              const isCurrentlyFavorite = false; // Simulação, implemente a lógica de favoritos
+              const isCurrentlyFavorite = false; 
               showToast(
                 `${product.name} ${isCurrentlyFavorite ? 'removido dos' : 'adicionado aos'} favoritos! (simulação)`,
                 "info"
