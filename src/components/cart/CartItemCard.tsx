@@ -86,6 +86,7 @@ export const CartItemCard: React.FC<CartItemProps> = ({ item }) => {
   );
 };
 
-function showToast(arg0: string, arg1: string) {
+function showToast(_arg0: string, _arg1: string) {
   throw new Error('Function not implemented.');
 }
+

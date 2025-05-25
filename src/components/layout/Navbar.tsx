@@ -1,6 +1,6 @@
 import { Search, ShoppingCart } from 'lucide-react';
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useCart } from '../../contexts/CartContext';
 import logoSrc from '../../imagens/Logo.png';
 import ThemeToggle from '../common/ThemeToggle';
@@ -16,7 +16,7 @@ const SearchInput: React.FC<InputProps> = ({ className, ...props }) => (
 export const Navbar: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const { state } = useCart();
-  const navigate = useNavigate();
+  
   const itemCount = state.itemCount;
 
   const handleSearch = (e: React.FormEvent) => {

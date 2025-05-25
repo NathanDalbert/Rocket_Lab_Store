@@ -67,7 +67,7 @@ export const HomePage: React.FC = () => {
     }
 
   
-    switch (filters.sortBy) {
+    switch (filters.sortBy as string) {
       case "price-asc":
         processedProducts.sort((a, b) => a.price - b.price);
         break;
@@ -152,7 +152,7 @@ export const HomePage: React.FC = () => {
               Ordenado por:{" "}
               <span className="font-semibold text-orange-600 dark:text-orange-400">
                 {filters.sortBy === "relevance" && "Relevância"}
-                {filters.sortBy === "bestsellers" && "Mais Vendidos"}
+                {(filters.sortBy as string) === "bestsellers" && "Mais Vendidos"}
                 {filters.sortBy === "price-asc" && "Menor Preço"}
                 {filters.sortBy === "price-desc" && "Maior Preço"}
                 {filters.sortBy === "newest" && "Mais Recentes"}
