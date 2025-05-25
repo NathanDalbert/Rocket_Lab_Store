@@ -10,6 +10,7 @@ import { CheckoutPage } from './pages/CheckoutPage';
 import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
+import SearchPage from './pages/SearchPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/checkout" element={<CheckoutPage />} />
                   <Route path="*" element={<NotFoundPage />} />
+                  <Route path="/search" element={<SearchPage />} />
                 </Routes>
               </main>
               <Footer />
