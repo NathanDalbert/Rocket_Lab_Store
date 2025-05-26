@@ -1,4 +1,4 @@
-# 🚀 RocktLabStore - Frontend E-commerce
+# 🚀 RocktLabStore
 
 Este repositório contém o código-fonte do frontend da **RocktLabStore**, uma aplicação de e-commerce  construída com **React**, **TypeScript** e **Vite**.
 
