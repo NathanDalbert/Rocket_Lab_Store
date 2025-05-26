@@ -84,14 +84,13 @@ Antes de começar, certifique-se de ter os seguintes softwares instalados:
 
 ### 1. Clone o Repositório
 
-```bash
-git clone https://github.com/NathanDalbert/Rocket_Lab_Store.git
-2. Navegue até o Diretório do Projeto
+bash git clone https://github.com/NathanDalbert/Rocket_Lab_Store.git
+### 2. Navegue até o Diretório do Projeto
 bash
 Copiar
 Editar
 cd rocket_lab_store
-3. Instale as Dependências
+### 3. Instale as Dependências
 Usando npm:
 
 bash
